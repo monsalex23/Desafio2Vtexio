@@ -1,3 +1,9 @@
-.headerRowContainer--header-row{
-  background-color: black;
+.imageElement{
+  border-radius: 5;
+}
+.figure{
+  opacity: 0;
+}
+.carouselGaleryCursor{
+  transform: translate(-35px, 0px);
 }

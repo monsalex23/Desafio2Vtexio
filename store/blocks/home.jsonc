@@ -2,7 +2,8 @@
   "store.home": {
     "blocks": [
       "tab-layout#menu",
-      "slider-layout#home"
+      "slider-layout#home",
+      "search-result-layout.customQuery"
     ]
   },
   "tab-layout#menu": {
@@ -108,6 +109,7 @@
       "tabId": "Chelsee"
     }
   },
+  //Slider imagenes
   "slider-layout#home": {
     "props": {
       "itemsPerPage": {
@@ -143,5 +145,39 @@
       "width": "70%",
       "blockClass": "banner"
     }
+  },
+  //items centrales de la pagina
+  "search-result-layout.customQuery": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip"
+      }
+    },
+    "blocks": ["search-result-layout.desktop#mx", "search-result-layout.mobile"]
+  },
+  "search-result-layout.desktop#mx":{
+    "children": [
+      // "flex-layout.row#searchbread",
+      // "flex-layout.row#searchtitle",
+      "search-content#mx"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-result-layout.mobile":{
+
+  },
+  "flex-layout.row#result":{
+    "children":[
+      "search-content#mx"
+    ]
+  },
+  "search-content#mx":{
+    "blocks": [
+      "gallery", "not-found"
+    ]
   }
+ 
 }
