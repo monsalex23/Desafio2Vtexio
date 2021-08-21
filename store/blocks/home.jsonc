@@ -151,7 +151,9 @@
     "props": {
       "querySchema": {
         "skusFilter": "FIRST_AVAILABLE",
-        "simulationBehavior": "skip"
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": 10,
+        "maxItemsDepartment": 2
       }
     },
     "blocks": ["search-result-layout.desktop#mx", "search-result-layout.mobile"]
