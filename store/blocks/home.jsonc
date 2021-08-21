@@ -1,14 +1,112 @@
 {
   "store.home": {
     "blocks": [
-     
-      "slider-layout#home",
-      "info-card#home"
-    
+      "tab-layout#menu",
+      "slider-layout#home"
     ]
-    
-
-
+  },
+  "tab-layout#menu": {
+    "children": [
+      "tab-list#menu"
+      // "tab-content#menu"
+    ],
+    "props": {
+      "defaultActiveTabId": "menu1"
+    }
+  },
+  //menu up
+  "tab-list#menu": {
+    "children": [
+      "tab-list.item#Todos los Equipos",
+      "tab-list.item#Barcelona",
+      "tab-list.item#Real Madrid",
+      "tab-list.item#Atelico Madrid",
+      "tab-list.item#PSG",
+      "tab-list.item#Chelsee"
+    ]
+  },
+  "tab-list.item#Todos los Equipos": {
+    "props": {
+      "tabId": "Todos los Equipos",
+      "label": "Todos los Equipos",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#Barcelona": {
+    "props": {
+      "tabId": "Barcelona",
+      "label": "Barcelona"
+    }
+  },
+  "tab-list.item#Real Madrid": {
+    "props": {
+      "tabId": "Real Madrid",
+      "label": "Real Madrid"
+    }
+  },
+  "tab-list.item#Atelico Madrid": {
+    "props": {
+      "tabId": "Atelico Madrid",
+      "label": "Atelico Madrid"
+    }
+  },
+  "tab-list.item#PSG": {
+    "props": {
+      "tabId": "PSG",
+      "label": "PSG"
+    }
+  },
+  "tab-list.item#Chelsee": {
+    "props": {
+      "tabId": "Chelsee",
+      "label": "Chelsee"
+    }
+  },
+  "tab-content#home": {
+    "children": [
+      "tab-content.item#Todos los Equipos",
+      "tab-content.item#Barcelona",
+      "tab-content.item#Real Madrid",
+      "tab-content.item#Atelico Madrid",
+      "tab-content.item#PSG",
+      "tab-content.item#Chelsee"
+    ]
+  },
+  "tab-content.item#Todos los Equipos": {
+    "children": [],
+    "props": {
+      "tabId": "Todos los Equipos"
+    }
+  },
+  "tab-content.item#Barcelona": {
+    "children": [],
+    "props": {
+      "tabId": "Barcelona"
+    }
+  },
+  "tab-content.item#Real Madrid": {
+    "children": [],
+    "props": {
+      "tabId": "Real Madrid"
+    }
+  },
+  "tab-content.item#Atelico Madrid": {
+    "children": [],
+    "props": {
+      "tabId": "Atelico Madrid"
+    }
+  },
+  "tab-content.item#PSG": {
+    "children": [],
+    "props": {
+      "tabId": "PSG"
+    }
+  },
+  "tab-content.item#Chelsee": {
+    "children": [],
+    "props": {
+      "tabId": "Chelsee"
+    }
   },
   "slider-layout#home": {
     "props": {
@@ -44,18 +142,6 @@
       "alt": "Banner wood sport",
       "width": "70%",
       "blockClass": "banner"
-    }
-  },
-  "info-card#home": {
-    "props": {
-      "id": "info-card-home",
-      "isFullModeStyle": false,
-      "textPosition": "left",
-      "src": "assets/01.png",
-      "headline": "Black Friday",
-      "callToActionText": "PRECOMPRA",
-      "callToActionUrl": "/sale/d",
-      "textAlignment": "center"
     }
   }
 }
