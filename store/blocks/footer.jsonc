@@ -1,29 +1,127 @@
 {
   "footer": {
-    "blocks": [
-      "footer-layout.desktop",
-      "footer-layout.mobile"
-    ]
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
   },
   "footer-layout.desktop": {
     "children": [
-      "flex-layout.row#footer"
+      "flex-layout.row#footer-1-desktop",
+      "flex-layout.row#footer-2-desktop",
+      "flex-layout.row#footer-3-desktop"
     ]
   },
+  "flex-layout.row#footer-1-desktop": {
+    "children": [
+      
+     
+      "social-networks"
+    ],
+    "props": {
+      "blockClass": "menu-row",
+      "paddingTop": 6,
+      "paddingBottom": 3,
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    }
+  },
+
+  "social-networks": {
+    "props": {
+      "socialNetworks": [
+        {
+          "name": "pinterest",
+          "url": "https://vtex.com/br-pt/"
+        },
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/company/vtex/"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/vtexonline"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/user/VTEXTV"
+        },
+        {
+          "name": "WhatsApp",
+          "url": "https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20%0A*ID%3A*%2052292"
+        }
+      ]
+    }
+  },
+
+  "flex-layout.row#footer-2-desktop": {
+    "children": ["accepted-payment-methods"],
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "payment-methods"
+    }
+  },
+  "accepted-payment-methods": {
+    "props": {
+      "paymentMethods": ["MasterCard", "Visa", "Diners Club","Diners Club"]
+    }
+  },
+
+  "flex-layout.row#footer-3-desktop": {
+    "children": ["rich-text#footer"],
+    "props": {
+      "blockClass": "credits"
+    }
+  },
+  "rich-text#footer": {
+    "props": {
+      "text": "",
+      "blockClass": "footer"
+    }
+  },
+
   "footer-layout.mobile": {
     "children": [
-      "flex-layout.row#footer"
+      "flex-layout.row#1-footer-mobile",
+      "flex-layout.row#2-footer-mobile"
     ]
   },
-  "flex-layout.row#footer": {
-    "children": [
-      "image"
-    ]
-  },
-  "image": {
+  "flex-layout.row#2-footer-mobile": {
+    "children": ["flex-layout.col#footer-1-mobile"],
     "props": {
-      "width": 100,
-      "src": "assets/logo2.png"
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4
+    }
+  },
+  "flex-layout.col#footer-1-mobile": {
+    "children": [
+      "accepted-payment-methods",
+      "social-networks",
+      "rich-text#footer-mobile"
+    ],
+    "props": {
+      "blockClass": "payment-methods",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "rowGap": 4
+    }
+  },
+  "flex-layout.row#1-footer-mobile": {
+    "props": {
+      "paddingTop": 4,
+      "paddingBottom": 4
+    },
+    "children": []
+  },
+  "rich-text#footer-mobile": {
+    "props": {
+      "text": "",
+      "blockClass": "footer"
     }
   }
 }

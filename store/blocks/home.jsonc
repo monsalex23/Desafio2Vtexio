@@ -153,33 +153,118 @@
         "skusFilter": "FIRST_AVAILABLE",
         "simulationBehavior": "skip",
         "maxItemsPerPage": 10,
-        "maxItemsDepartment": 2
+        "maxItemsDepartment": 2,
+        "blockClass": "sritems"
+        
       }
     },
-    "blocks": ["search-result-layout.desktop#mx", "search-result-layout.mobile"]
+    "blocks": [
+      "search-result-layout.desktop#mx",
+      "search-result-layout.mobile"
+    ]
   },
-  "search-result-layout.desktop#mx":{
+  "search-result-layout.desktop#mx": {
     "children": [
       // "flex-layout.row#searchbread",
       // "flex-layout.row#searchtitle",
-      "search-content#mx"
+      "search-content"
     ],
     "props": {
       "preventRouteChange": true
     }
   },
-  "search-result-layout.mobile":{
+  "search-result-layout.mobile": {
 
   },
-  "flex-layout.row#result":{
-    "children":[
-      "search-content#mx"
+  "search-content": {
+    "blocks": [
+      "gallery",
+      "not-found"
     ]
   },
-  "search-content#mx":{
-    "blocks": [
-      "gallery", "not-found"
+  "gallery#mx": {
+    "props": {
+      "layout": [
+        {
+          "name": "grid",
+          "component": "gridSummary",
+          "itemsPerRow": {
+            "(min-with:1300px)":2,
+            "desktop": 2,
+            "tablet": 2,
+            "phone": 1
+          }
+        },
+        {
+          "name": "list",
+          "coponent": "listSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "listSummary": "product-summary.shelf",
+      "gridSummary": "product-summary.shelf"
+    }
+  },
+  "product-summary.shelf#mx":{
+    "children":[
+      "product-summary-name",
+      "product-images",
+      "vtex.product-highlights@2.x:product-highlights",
+      "product-summary-price",
+      "add-to-cart-button"
+    ],
+    "props":{
+      "blockclass":["aoba"]
+    }
+  },
+  "product-images":{
+    "props":{
+      "showNavigationArrows": true,
+      "showNavigationDots": true
+    }
+  
+  },
+  "vtex.product-highlights@2.x:product-highlights": {
+    "children": ["product-highlight-text"]
+  },
+  "product-highlight-text": {
+    "props": {
+      "message": "highlightName",
+      "link": ""
+    }
+  },
+  "add-to-cart-button":{
+    "props": {
+      "onClickBehavior": "go-to-product-page",
+      "text": "ver mas"
+    }
+  },
+  "modal-trigger": {
+    "children": [
+      "rich-text",
+      "modal-layout"
     ]
+  },
+  "rich-text":{
+    "props": {
+      "text":"Aoba"
+    }
+  },
+  "modal-layout":{
+    "children": [
+      "video"
+    ]
+  },
+  "video":{
+    "props": {
+      "width": "100%",
+      "height": "600px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://www.youtube.com/watch?v=uyAQBasuGx0",
+      "blockClass": "videoEl"
+    }
   }
- 
+  
 }
