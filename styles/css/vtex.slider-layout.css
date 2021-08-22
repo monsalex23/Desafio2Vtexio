@@ -1,5 +1,5 @@
 .sliderLayoutContainer{
-    background-color: #303030;
+    background-color: #7e9db9;
 }
 .imageElement{
     border-radius: 15px;
@@ -11,4 +11,4 @@
 }
 .carouselGaleryCursor{
     transform: translate(-35px, 0px);
-}
+} 

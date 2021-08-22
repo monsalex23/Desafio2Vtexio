@@ -1,9 +1,13 @@
 .flexCol{
-    background-color: black;
+    background-color: #7e9db9;
     
 }
 .flexRowContent{
-    background-color: black;
-    padding-top: auto;
-    height: auto;
+    background-color: #7e9db9;
 }
+.flexRow{
+    background-color: #7e9db9;
+} 
+.stretchChildrenWidth{
+
+} 

@@ -1,3 +1,33 @@
-.galleryItem{
-    background-color: black;
+ .searchResultContainer{
+    background-color: #7e9db9;
+  
 }
+  
+
+.gallery{
+    background-color: #282b2e;
+      
+    margin-left: 0%;
+    margin-right: 0%; 
+}
+
+.produto1{
+    background-color: rebeccapurple
+}
+ .container{
+    background-color: #282b2e;
+    width: 100%;
+    height: 100%;
+}
+ 
+
+
+.galleryItem{
+    background-color: #282b2e;
+     margin: 0%; 
+
+}
+.galleryItem--normal{
+    background-color: #282b2e;
+     width: 100%; 
+} 
