@@ -1,10 +1,8 @@
-# Minimum Boilerplate Theme
+# I Use to Minimum Boilerplate Theme to create a store
 
 The minimum Boilerplate Theme is basic store front model based on the VTEX IO Store Framework.
 
 It should be used only when you want to start a new store theme without any pre-set configurations, as is the case with [Store Theme](https://github.com/vtex-apps/store-theme). 
-
-While Store Theme gives developers a ready-to-go default store front structure, the Minimum Boilerplate Theme will enable you to build you store freely from scratch.
 
 ## Configuration
 
@@ -60,3 +58,18 @@ Then time has come to upload all the changes you made in your local files to the
 If the process runs without any errors, the following message will be displayed: `App linked successfully`. Then, run the `vtex browse` command to open a browser window having your linked store in it.
 
 This will enable you to see the applied changes in real time, through the account and workspace in which you are working.
+
+
+### Step 7- Use the components
+
+"tab-layout#menu" for items
+https://vtex.io/docs/components/all/vtex.tab-layout@0.4.3/
+
+"slider-layout#home" for slider
+https://vtex.io/docs/app/vtex.slider-layout@0.19.2/
+
+ "search-result-layout.customQuery"
+ https://vtex.io/docs/components/all/vtex.search-result@3.107.0/
+
+ "footer-layout.desktop", "footer-layout.mobile" and "social-networks"
+ https://vtex.io/docs/components/all/vtex.store-footer@2.23.1/
